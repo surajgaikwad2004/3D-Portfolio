@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SURAJ> // Portfolio</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+<!-- Three.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- CRT Scanline -->
+<div class="scanline"></div>
+
+<!-- Background layers -->
+<div class="bg-layer bg-layer--gradient"></div>
+<canvas id="particle-canvas"></canvas>
+
+<!-- ══════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════ -->
+<nav>
+  <a href="#hero" class="nav-logo">SUR<span>U</span>J</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Stack</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    SYS_ONLINE
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+
+  <!-- Spinning HUD rings -->
+  <div class="hud-ring hud-ring--1"></div>
+  <div class="hud-ring hud-ring--2"></div>
+  <div class="hud-ring hud-ring--3"></div>
+
+  <!-- Corner bracket decorations -->
+  <div class="hero-corner hero-corner--tl"></div>
+  <div class="hero-corner hero-corner--tr"></div>
+  <div class="hero-corner hero-corner--bl"></div>
+  <div class="hero-corner hero-corner--br"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">// <span>PORTFOLIO_v2.4.1</span> // SYSTEM INITIALIZED</div>
+    <h1 class="hero-title">
+      <div class="glitch" data-text="SURAJ">Suraj</div><br />
+      <div class="glitch" data-text="GAIKWAD"></div>
+    </h1>
+    <p class="hero-sub">
+      <b>Full‑Stack Developer</b> &nbsp;·&nbsp; <b>3D Artist</b> &nbsp;·&nbsp; <b>Creative Technologist</b>
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact"  class="btn btn-ghost">Get In Touch</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>SCROLL</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════ -->
+<div class="divider"></div>
+<section id="about">
+  <div class="section-header reveal">
+    <div class="section-tag">01 // About</div>
+    <h2 class="section-title">Building the <span>Future</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-text reveal-left">
+      <p>I'm a <b>creative technologist</b> obsessed with the intersection of code and design. I architect immersive digital experiences that push the boundaries of what's possible on the web.</p>
+      <p>With <b>1.5+ years</b> of experience, I specialize in building high‑performance applications, real‑time 3D environments, and AI‑powered interfaces that leave users speechless.</p>
+      <div class="about-stats">
+        <div class="stat-box">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Projects Shipped</div>
+        </div>
+        <!-- <div class="stat-box">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Users Reached</div>
+        </div> -->
+        <div class="stat-box">
+          <div class="stat-num">12</div>
+          <div class="stat-label">HakerRank</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">1.2yr</div>
+          <div class="stat-label">Experience</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-visual reveal-right">
+      <div class="about-avatar">
+        <div class="avatar-inner">⬡</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills reveal delay-2">
+    <div class="skill-item">
+      <div class="skill-header"><span>Three.js / WebGL</span><span>95%</span></div>
+      <div class="skill-bar"><div class="skill-fill"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header"><span>React / Next.js</span><span>92%</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="--scale:.92"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header"><span>Node.js / Python</span><span>88%</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="--scale:.88"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-header"><span>AI / ML Integration</span><span>82%</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="--scale:.82"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PROJECTS
+══════════════════════════════════════════ -->
+<div class="divider"></div>
+<section id="projects">
+  <div class="section-header reveal">
+    <div class="section-tag">02 // Projects</div>
+    <h2 class="section-title">Selected <span>Work</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- 001 -->
+    <div class="card reveal delay-1">
+      <div class="card-glow"></div>
+      <div class="card-border-run"></div>
+      <div class="card-img">
+        <div class="card-img-bg" style="background:linear-gradient(135deg,#001a2e,#002244,#001133);">🧠</div>
+        <div class="card-badge badge-ai">AI</div>
+      </div>
+      <div class="card-body">
+        <div class="card-num">// 001</div>
+        <h3 class="card-title">Neural Canvas</h3>
+        <p class="card-desc">Real‑time generative art platform powered by diffusion models. Creates unique pieces through human–AI collaboration.</p>
+        <div class="card-tags">
+          <span class="tag">Python</span><span class="tag">WebGL</span><span class="tag">Diffusion</span><span class="tag">React</span>
+        </div>
+        <a href="#" class="card-link">View Project</a>
+      </div>
+    </div>
+
+    <!-- 002 -->
+    <div class="card reveal delay-2">
+      <div class="card-glow"></div>
+      <div class="card-border-run"></div>
+      <div class="card-img">
+        <div class="card-img-bg" style="background:linear-gradient(135deg,#1a0020,#2d0040,#150030);">🌌</div>
+        <div class="card-badge badge-3d">3D</div>
+      </div>
+      <div class="card-body">
+        <div class="card-num">// 002</div>
+        <h3 class="card-title">Cosmos Explorer</h3>
+        <p class="card-desc">Interactive 3D space exploration built with Three.js. Navigate procedurally generated star systems in real time.</p>
+        <div class="card-tags">
+          <span class="tag">Three.js</span><span class="tag">GLSL</span><span class="tag">WebWorkers</span>
+        </div>
+        <a href="#" class="card-link">View Project</a>
+      </div>
+    </div>
+
+    <!-- 003 -->
+    <div class="card reveal delay-3">
+      <div class="card-glow"></div>
+      <div class="card-border-run"></div>
+      <div class="card-img">
+        <div class="card-img-bg" style="background:linear-gradient(135deg,#001a10,#003320,#001a08);">⚡</div>
+        <div class="card-badge badge-web">Web</div>
+      </div>
+      <div class="card-body">
+        <div class="card-num">// 003</div>
+        <h3 class="card-title">Hyperflow CMS</h3>
+        <p class="card-desc">Next‑gen headless CMS with real‑time collaboration, AI content generation, and sub‑100ms global delivery.</p>
+        <div class="card-tags">
+          <span class="tag">Next.js</span><span class="tag">Edge</span><span class="tag">Postgres</span><span class="tag">AI</span>
+        </div>
+        <a href="#" class="card-link">View Project</a>
+      </div>
+    </div>
+
+    <!-- 004 -->
+    <div class="card reveal delay-1">
+      <div class="card-glow"></div>
+      <div class="card-border-run"></div>
+      <div class="card-img">
+        <div class="card-img-bg" style="background:linear-gradient(135deg,#1a1500,#332900,#1a1000);">🔮</div>
+        <div class="card-badge badge-3d">3D</div>
+      </div>
+      <div class="card-body">
+        <div class="card-num">// 004</div>
+        <h3 class="card-title">Quantum UI Kit</h3>
+        <p class="card-desc">Design system for the future. 200+ components with built‑in physics, particle systems, and AI theming.</p>
+        <div class="card-tags">
+          <span class="tag">React</span><span class="tag">Framer</span><span class="tag">TypeScript</span>
+        </div>
+        <a href="#" class="card-link">View Project</a>
+      </div>
+    </div>
+
+    <!-- 005 -->
+    <div class="card reveal delay-2">
+      <div class="card-glow"></div>
+      <div class="card-border-run"></div>
+      <div class="card-img">
+        <div class="card-img-bg" style="background:linear-gradient(135deg,#1a0010,#2d0020,#150015);">🎮</div>
+        <div class="card-badge badge-web">Web</div>
+      </div>
+      <div class="card-body">
+        <div class="card-num">// 005</div>
+        <h3 class="card-title">Neon Arcade</h3>
+        <p class="card-desc">Browser‑native game engine featuring a cyberpunk roguelike with procedural level generation and ray‑traced lighting.</p>
+        <div class="card-tags">
+          <span class="tag">WebGPU</span><span class="tag">Wasm</span><span class="tag">Rust</span>
+        </div>
+        <a href="#" class="card-link">View Project</a>
+      </div>
+    </div>
+
+    <!-- 006 -->
+    <div class="card reveal delay-3">
+      <div class="card-glow"></div>
+      <div class="card-border-run"></div>
+      <div class="card-img">
+        <div class="card-img-bg" style="background:linear-gradient(135deg,#001020,#002033,#001520);">🛸</div>
+        <div class="card-badge badge-ai">AI</div>
+      </div>
+      <div class="card-body">
+        <div class="card-num">// 006</div>
+        <h3 class="card-title">SynthAgent</h3>
+        <p class="card-desc">Multi‑modal AI agent platform. Orchestrates LLMs, vision models, and code interpreters in a visual node editor.</p>
+        <div class="card-tags">
+          <span class="tag">LangChain</span><span class="tag">FastAPI</span><span class="tag">React Flow</span>
+        </div>
+        <a href="#" class="card-link">View Project</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     STACK / SKILLS
+══════════════════════════════════════════ -->
+<div class="divider"></div>
+<section id="skills">
+  <div class="section-header reveal">
+    <div class="section-tag">03 // Stack</div>
+    <h2 class="section-title">Tech <span>Arsenal</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="skills-marquee">
+    <div class="marquee-track">
+      <span class="lit">REACT</span><span>NEXT.JS</span><span class="lit">THREE.JS</span><span>WEBGL</span>
+      <span class="lit">GLSL</span><span>TYPESCRIPT</span><span>NODE.JS</span><span class="lit">PYTHON</span>
+      <span>RUST</span><span class="lit">WEBGPU</span><span>DOCKER</span><span>KUBERNETES</span>
+      <span class="lit">POSTGRESQL</span><span>REDIS</span><span>OPENAI</span><span class="lit">DIFFUSION</span>
+      <!-- duplicate for seamless loop -->
+      <span class="lit">REACT</span><span>NEXT.JS</span><span class="lit">THREE.JS</span><span>WEBGL</span>
+      <span class="lit">GLSL</span><span>TYPESCRIPT</span><span>NODE.JS</span><span class="lit">PYTHON</span>
+      <span>RUST</span><span class="lit">WEBGPU</span><span>DOCKER</span><span>KUBERNETES</span>
+      <span class="lit">POSTGRESQL</span><span>REDIS</span><span>OPENAI</span><span class="lit">DIFFUSION</span>
+    </div>
+  </div>
+
+  <div class="tech-grid reveal">
+    <div class="tech-item"><span class="tech-icon">⚛️</span><div class="tech-name">React</div></div>
+    <div class="tech-item"><span class="tech-icon">🔺</span><div class="tech-name">Three.js</div></div>
+    <div class="tech-item"><span class="tech-icon">🌐</span><div class="tech-name">Next.js</div></div>
+    <div class="tech-item"><span class="tech-icon">🦀</span><div class="tech-name">Rust</div></div>
+    <div class="tech-item"><span class="tech-icon">🐍</span><div class="tech-name">Python</div></div>
+    <div class="tech-item"><span class="tech-icon">🐳</span><div class="tech-name">Docker</div></div>
+    <div class="tech-item"><span class="tech-icon">☸️</span><div class="tech-name">Kubernetes</div></div>
+    <div class="tech-item"><span class="tech-icon">🧠</span><div class="tech-name">LLM APIs</div></div>
+    <div class="tech-item"><span class="tech-icon">🎮</span><div class="tech-name">WebGPU</div></div>
+    <div class="tech-item"><span class="tech-icon">📊</span><div class="tech-name">Postgres</div></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     EXPERIENCE
+══════════════════════════════════════════ -->
+<div class="divider"></div>
+<section id="experience">
+  <div class="section-header reveal">
+    <div class="section-tag">04 // Experience</div>
+    <h2 class="section-title">Mission <span>Log</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2023 — Present</div>
+      <div class="timeline-role">Full Stack Development Intern </div>
+      <div class="timeline-company">Growfinix Technology</div>
+      <p class="timeline-desc">Leading WebGL infrastructure and AI product development. Built real-time 3D collaboration tools serving 5K+ users globally.</p>
+    </div>
+    <!-- <div class="timeline-item reveal delay-1">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2020 — 2023</div>
+      <div class="timeline-role">Senior Frontend Architect</div>
+      <div class="timeline-company">// QUANTUM SYSTEMS — New York, NY</div>
+      <p class="timeline-desc">Architected micro-frontend platform adopted by 30+ engineering teams. Reduced bundle sizes by 60% and improved TTI by 45%.</p>
+    </div>
+    <div class="timeline-item reveal delay-2">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2018 — 2020</div>
+      <div class="timeline-role">Creative Technologist</div>
+      <div class="timeline-company">// ORBITAL STUDIO — Berlin, DE</div>
+      <p class="timeline-desc">Created award-winning interactive web experiences for global brands including Nike, Sony, and Spotify.</p>
+    </div>
+    <div class="timeline-item reveal delay-3">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2016 — 2018</div>
+      <div class="timeline-role">Full‑Stack Developer</div>
+      <div class="timeline-company">// HYPER AGENCY — London, UK</div>
+      <p class="timeline-desc">Built scalable SaaS platforms from zero to Series B. Led a team of 8 across frontend, backend, and DevOps.</p>
+    </div>
+  </div> -->
+</section>
+
+<!-- ══════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════ -->
+<div class="divider"></div>
+<section id="contact">
+  <div class="section-header reveal">
+    <div class="section-tag">05 // Contact</div>
+    <h2 class="section-title">Initiate <span>Contact</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="contact-glow reveal">
+    <p style="font-family:var(--mono);font-size:.75rem;letter-spacing:.3em;color:rgba(0,245,255,.5);text-transform:uppercase;">
+      // Ready for next mission
+    </p>
+    <a href="mailto:surajgaikwad1305@gmail.com" class="contact-email">surajgaikwad1305@gmail.com</a>
+    <p style="font-family:var(--body);font-size:1rem;color:var(--text);opacity:.6;line-height:1.7;">
+      Available for freelance, consulting, and full-time opportunities.<br />
+      Response time: <span style="color:var(--cyan);">under 24 hours</span>
+    </p>
+    <div class="contact-socials">
+      <a href="#" class="social-link">GitHub</a>
+      <a href="#" class="social-link">LinkedIn</a>
+      <a href="#" class="social-link">Twitter</a>
+      
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Suraj Gaikwad &nbsp;·&nbsp; <span>SURAJ PORTFOLIO</span> &nbsp;·&nbsp; ALL SYSTEMS OPERATIONAL</p>
+</footer>
+
+<!-- JavaScript -->
+<script src="main.js"></script>
+</body>
+</html>
